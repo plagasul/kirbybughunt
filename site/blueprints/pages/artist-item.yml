@@ -1,0 +1,71 @@
+title: Artist
+icon: user
+
+options:
+  changeTitle: true
+  changeStatus: true
+  changeTemplate: false
+  changeSlug: true
+  delete: true
+  duplicate: true
+
+tabs:
+  info:
+    label: Info
+    icon: text
+    fields:
+      bio:
+        label: Bio
+        type: textarea
+        buttons: false
+        width: 3/4
+        size: medium
+        maxlength: 1000
+      sort:
+        label: Sort By
+        type: text
+        placeholder: Smith
+        help: Part of the artist's name that will be used for sorting in the artists list
+        width: 1/4
+  media:
+    label: Media
+    icon: image
+    sections:
+      works:
+        headline: Works
+        type: files
+        template: image
+        layout: cards
+        size: small
+        info: "{{file.video.videoNotEmpty}} - {{file.horizontalWidth.fractionToEmoji}}"
+        min: 1
+  news:
+    label: News
+    icon: bell
+    fields:
+      news:
+        label: News
+        type: structure
+        fields:
+          startDate:
+            label: Start Date
+            type: date
+            default: today
+            width: 1/4
+          endDate:
+            label: End Date
+            type: date
+            default: today
+            width: 1/4
+          url:
+            label: Venue Url
+            type: url
+            placeholder: https://kaiser-wilhelm.de
+            width: 2/4
+          text:
+            label: Text
+            type: textarea
+            buttons:
+              - italic
+            placeholder: 'Long Farewells, solo show, Pori Art Museum, Pori'
+            help: Single-line only, please

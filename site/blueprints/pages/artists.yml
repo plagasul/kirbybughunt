@@ -1,0 +1,19 @@
+title: Artists
+icon: users
+
+options:
+  changeTitle: false
+  changeStatus: false
+  changeTemplate: false
+  changeSlug: false
+  delete: false
+  duplicate: false
+
+sections:
+  artists:
+    headline: Artists
+    type: pages
+    status: all
+    templates: artist-item
+    layout: cards
+    sortBy: sort asc

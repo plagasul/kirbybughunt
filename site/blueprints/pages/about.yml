@@ -15,7 +15,7 @@ status:
 # More about page options: https://getkirby.com/docs/reference/panel/blueprints/page#options
 options:
   changeSlug: false
-  delete: false
+  delete: true
 
 # Define the form layout with two columns, each column has a set of fields
 # Columns are optional but help structure the form layout
